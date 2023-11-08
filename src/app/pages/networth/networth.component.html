@@ -27,14 +27,24 @@
         <td style="text-transform: capitalize">{{ i.type }}</td>
         <td style="text-transform: capitalize">{{ i.name }}</td>
         <td style="text-transform: capitalize">{{ i.monetary_value }}</td>
-        <!--         <td>
-          <span (click)="onClickJobEdit()" style="cursor: pointer"
-            ><mat-icon>edit</mat-icon></span
-          ><span>&nbsp;&nbsp;&nbsp;</span>
-          <span (click)="onClickJobDelete()" style="cursor: pointer"
-            ><mat-icon>delete</mat-icon></span
-          >
-        </td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="nw-table">
+  <table *ngIf="netWorthData">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Sum</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let i of netWorthData">
+        <td style="text-transform: capitalize">{{ i.name }}</td>
+        <td style="text-transform: capitalize">{{ i.monetary_value }}</td>
       </tr>
     </tbody>
   </table>

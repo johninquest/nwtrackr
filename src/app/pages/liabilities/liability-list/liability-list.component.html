@@ -14,7 +14,7 @@
         <!--  <th>Category</th> -->
         <th>Type</th>
         <th>Name</th>
-        <th>Monetary value</th>
+        <th>Value (€)</th>
       </tr>
     </thead>
 
@@ -25,7 +25,7 @@
         <td style="text-transform: capitalize">{{ i.type }}</td>
         <td style="text-transform: capitalize">{{ i.name }}</td>
         <td style="text-transform: capitalize">
-          {{ i.monetary_value | currency : "EUR" }}
+          {{ i.monetary_value }}
         </td>
       </tr>
     </tbody>

@@ -9,7 +9,6 @@ export const AssetCategoryList = [
     { value: 'business', viewValue: 'Business' },
     { value: 'cash', viewValue: 'Cash' },
     { value: 'investment', viewValue: 'Investment' },
-    { value: 'liability', viewValue: 'Liability' },
     { value: 'real estate', viewValue: 'Real estate' },
     { value: 'retirement saving', viewValue: 'Retirement saving' },
     { value: 'vehicle', viewValue: 'Vehicle' },

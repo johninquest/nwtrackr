@@ -2,50 +2,29 @@
 
 <div class="title">net worth</div>
 
-<div style="text-align: center">Net worth = Assets - Liabilities</div>
-
-<!-- <div style="text-align: center; margin: 3rem 1rem">
-  {{ netWorthData | json }}
-</div> -->
-
 <div class="nw-table">
   <table *ngIf="netWorthData">
     <thead>
       <tr>
-        <th>Date</th>
-        <th>Category</th>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Monetary value</th>
+        <th>Assets</th>
+        <th>Liabilities</th>
       </tr>
     </thead>
 
     <tbody>
-      <tr *ngFor="let i of netWorthData">
-        <td>{{ dateFormatted(i.created_at) }}</td>
-        <td style="text-transform: capitalize">{{ i.category }}</td>
-        <td style="text-transform: capitalize">{{ i.type }}</td>
-        <td style="text-transform: capitalize">{{ i.name }}</td>
-        <td style="text-transform: capitalize">{{ i.monetary_value }}</td>
+      <tr>
+        <td style="text-transform: capitalize">{{ sumOfAssets }}</td>
+        <td style="text-transform: capitalize">{{ sumOfLiabilities }}</td>
       </tr>
+      <!--  <tr>
+        {{
+          sumOfAssets - sumOfLiabilities
+        }}
+      </tr> -->
     </tbody>
   </table>
 </div>
 
-<div class="nw-table">
-  <table *ngIf="netWorthData">
-    <thead>
-      <tr>
-        <th>Category</th>
-        <th>Sum</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr *ngFor="let i of netWorthData">
-        <td style="text-transform: capitalize">{{ i.name }}</td>
-        <td style="text-transform: capitalize">{{ i.monetary_value }}</td>
-      </tr>
-    </tbody>
-  </table>
+<div style="text-align: center; margin: 3rem 1rem">
+  Net worth = Assets - Liabilities
 </div>

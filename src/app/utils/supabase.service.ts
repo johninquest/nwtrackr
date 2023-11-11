@@ -18,7 +18,7 @@ export class SupabaseService {
   async getAllRowsInTable(tableName: string) {
     let { data: requests, error } = await this.supabase
       .from(tableName)
-      .select("*");
+      .select("*").order('created_at', { ascending: false });
     return { data: requests, error };
   }
 

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AuthModule } from '@auth0/auth0-angular';
 import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -44,6 +45,13 @@ import { LiabilityCreateComponent } from './pages/liabilities/liability-create/l
     HttpClientModule,
     ReactiveFormsModule,
     MaterialModules,
+    AuthModule.forRoot({
+      domain: 'dev-4drk72zgjywr0v0f.us.auth0.com',
+      clientId: 'hHFpVmYlDWI85KJptMKDmqISZA77e1WK',
+      authorizationParams: {
+        redirect_uri: window.location.origin
+      }
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

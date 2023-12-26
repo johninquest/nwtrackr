@@ -1,34 +1,39 @@
-
 <div class="app-name">NetWorth360</div>
 <div class="centralize">
-    <div
-      class="signin-btn"
-      (click)="onClickGoogleAuth()"
-      matTooltip="Mit Google-Konto anmelden"
-    >
-      <button mat-stroked-button>
-        <span class="logo"><img src="assets/imgs/google_logo.png" /></span>
-        <span class="txt">Continue with Google</span>
-      </button>
-    </div>
-  
-<!--     <div class="signin-btn" (click)="onClickFacebookAuth()">
+  <div
+    class="signin-btn"
+    (click)="onClickGoogleAuth()"
+    matTooltip="Mit Google-Konto anmelden"
+  >
+    <button mat-stroked-button>
+      <span class="logo"><img src="assets/imgs/google_logo.png" /></span>
+      <span class="txt">Continue with Google</span>
+    </button>
+  </div>
+
+  <!--     <div class="signin-btn" (click)="onClickFacebookAuth()">
       <button mat-stroked-button>
         <span class="logo"><img src="assets/imgs/facebook_logo.png" /></span>
         <span class="txt">Continue with Facebook</span>
       </button>
     </div> -->
-  
-    <div class="signin-btn" (click)="onClickEmailAuth()">
-      <button mat-stroked-button>
-        <span class="logo"><mat-icon>email</mat-icon></span>
-        <span class="txt">Continue with E-mail</span>
-      </button>
-    </div> 
-        <div class="signin-btn" routerLink="/home">
-      <button mat-stroked-button>
-        <span class="logo"><mat-icon>home</mat-icon></span>
-        <span class="txt"></span>
-      </button>
-    </div>
+
+  <div class="signin-btn" (click)="onClickEmailAuth()">
+    <button mat-stroked-button>
+      <span class="logo"><mat-icon>email</mat-icon></span>
+      <span class="txt">Continue with E-mail</span>
+    </button>
   </div>
+  <div class="signin-btn" routerLink="/home">
+    <button mat-stroked-button>
+      <span class="logo"><mat-icon>home</mat-icon></span>
+      <span class="txt"></span>
+    </button>
+  </div>
+  <div class="signin-btn">
+    <button mat-stroked-button (click)="onClickAuth0()">
+      <!-- <span class="logo"><mat-icon>home</mat-icon></span> -->
+      <span class="txt">Auth0</span>
+    </button>
+  </div>
+</div>

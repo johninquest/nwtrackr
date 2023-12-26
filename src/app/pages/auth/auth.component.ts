@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-auth',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./auth.component.scss'],
 })
 export class AuthComponent {
+  constructor(private _auth0Service: AuthService) { }
+
   onClickGoogleAuth() {
     console.log('Tapped Google auth');
     alert('Under construction');
@@ -19,5 +22,9 @@ export class AuthComponent {
     console.log('Tapped Email auth');
     /*  this._router.navigateByUrl('/auth/email'); */
     alert('Under construction');
+  }
+
+  onClickAuth0() {
+    this._auth0Service.loginWithRedirect();
   }
 }

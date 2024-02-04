@@ -1,6 +1,6 @@
 {
   "name": "nwtrackr",
-  "version": "0.12.6",
+  "version": "0.2.4",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
